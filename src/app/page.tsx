@@ -240,7 +240,14 @@ export default function Home() {
       </main>
 
       <footer className="footer container">
-        <p>© {new Date().getFullYear()} OK Manager CRM. Built for field teams.</p>
+        <div className="footer-row">
+          <p>© {new Date().getFullYear()} OK Manager CRM. Built for field teams.</p>
+          <nav className="footer-links" aria-label="Legal">
+            <Link href="/terms">Terms</Link>
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/account-deletion">Account deletion</Link>
+          </nav>
+        </div>
       </footer>
     </div>
   );
