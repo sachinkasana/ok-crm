@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CompanyContact } from "../components/company-contact";
+import { companyInfo } from "../company";
 import { LegalShell } from "../components/legal-shell";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | OK Manager",
-  description: "Privacy Policy for OK Manager CRM.",
+  title: `Privacy Policy | ${companyInfo.name}`,
+  description: `Privacy Policy for ${companyInfo.productName}.`,
 };
 
 export default function PrivacyPage() {
@@ -65,9 +67,7 @@ export default function PrivacyPage() {
 
       <section className="legal-section">
         <h2>7. Contact</h2>
-        <p>
-          Phone / WhatsApp: <a href="tel:+919536500003">+91 95365 00003</a>
-        </p>
+        <CompanyContact />
       </section>
     </LegalShell>
   );

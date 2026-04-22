@@ -130,7 +130,8 @@ a {
   display: inline-flex;
   gap: 0.5rem;
   min-height: 44px;
-  white-space: nowrap;
+  min-width: 0;
+  white-space: normal;
 }
 
 .brand-logo {
@@ -141,9 +142,11 @@ a {
 
 .brand-text {
   color: var(--ink);
-  font-size: 0.9rem;
+  font-size: clamp(0.76rem, 1.1vw, 0.9rem);
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0;
+  line-height: 1.15;
+  max-width: 28ch;
 }
 
 .nav-links {
@@ -489,6 +492,27 @@ main {
   margin-top: 1rem;
 }
 
+.contact-details {
+  display: grid;
+  font-style: normal;
+  gap: 0.35rem;
+  margin-top: 1rem;
+}
+
+.contact-details strong {
+  color: var(--ink);
+}
+
+.contact-details span {
+  color: var(--ink-muted);
+  line-height: 1.55;
+}
+
+.contact-details a {
+  color: var(--brand-strong);
+  font-weight: 700;
+}
+
 .inner-main {
   padding: 3.8rem 0 0.8rem;
 }
@@ -633,7 +657,9 @@ main {
   }
 
   .brand-text {
-    font-size: 0.8rem;
+    font-size: 0.76rem;
+    max-width: min(28ch, calc(100vw - 100px));
+    text-align: center;
   }
 
   .nav-links {

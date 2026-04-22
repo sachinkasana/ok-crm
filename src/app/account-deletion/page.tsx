@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { CompanyContact } from "../components/company-contact";
+import { companyInfo } from "../company";
 import { LegalShell } from "../components/legal-shell";
 
 export const metadata: Metadata = {
-  title: "Account Deletion | OK Manager",
-  description: "How to request account deletion for OK Manager CRM.",
+  title: `Account Deletion | ${companyInfo.name}`,
+  description: `How to request account deletion for ${companyInfo.productName}.`,
 };
 
 export default function AccountDeletionPage() {
@@ -24,10 +26,9 @@ export default function AccountDeletionPage() {
       <section className="legal-section">
         <h2>Delete account without app access</h2>
         <p>
-          Contact support on WhatsApp or phone at{" "}
-          <a href="tel:+919536500003">+91 95365 00003</a> using your registered
-          mobile number.
+          Contact support using your registered mobile number.
         </p>
+        <CompanyContact />
       </section>
 
       <section className="legal-section">

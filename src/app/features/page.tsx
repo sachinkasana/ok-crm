@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { companyInfo } from "../company";
 
 const navItems = [
   { href: "/features", label: "Features" },
@@ -70,16 +71,16 @@ export default function FeaturesPage() {
       </div>
 
       <header className="topbar container">
-        <Link href="/" className="brand-mark" aria-label="OK Manager home">
+        <Link href="/" className="brand-mark" aria-label={`${companyInfo.name} home`}>
           <Image
             src="/ok-manager-logo.png"
-            alt="OK Manager"
+            alt={companyInfo.name}
             width={170}
             height={136}
             className="brand-logo"
             priority
           />
-          <span className="brand-text">OK Manager</span>
+          <span className="brand-text">{companyInfo.name}</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
           {navItems.map((item) => (
@@ -142,7 +143,7 @@ export default function FeaturesPage() {
 
       <footer className="footer container">
         <div className="footer-row">
-          <p>© {new Date().getFullYear()} OK Manager. Built for field teams.</p>
+          <p>© {new Date().getFullYear()} {companyInfo.name}. Built for field teams.</p>
           <nav className="footer-links" aria-label="Legal">
             <Link href="/about">About</Link>
             <Link href="/terms">Terms</Link>

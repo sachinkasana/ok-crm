@@ -1,7 +1,7 @@
 {
   "name": "ok-manager-crm-website",
   "version": "0.1.0",
-  "description": "Website for OK Manager CRM.",
+  "description": "Website for OK Manager CRM by OK MANAGER INFOTECH SOLUTION.",
   "private": true,
   "scripts": {
     "dev": "next dev",

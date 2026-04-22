@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Source_Sans_3 } from "next/font/google";
+import { companyInfo } from "./company";
 import "./globals.css";
 
 const headingFont = Space_Grotesk({
@@ -15,9 +16,9 @@ const bodyFont = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "OK Manager CRM",
+  title: companyInfo.productName,
   description:
-    "OK Manager CRM is a simple CRM by OK Manager for service businesses to manage customers, payments, leads, suppliers, and follow-ups.",
+    `${companyInfo.productName} is a simple CRM by ${companyInfo.name} for service businesses to manage customers, payments, leads, suppliers, and follow-ups.`,
 };
 
 export default function RootLayout({

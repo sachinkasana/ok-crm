@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { companyInfo } from "../company";
+import { CompanyContact } from "../components/company-contact";
 
 export const metadata: Metadata = {
-  title: "About OK Manager | OK Manager CRM",
+  title: `About ${companyInfo.name} | ${companyInfo.productName}`,
   description:
-    "Learn about OK Manager, the company behind OK Manager CRM for service businesses and field teams.",
+    `Learn about ${companyInfo.name}, the company behind ${companyInfo.productName} for service businesses and field teams.`,
 };
 
 const navItems = [
@@ -49,16 +51,16 @@ export default function AboutPage() {
       </div>
 
       <header className="topbar container">
-        <Link href="/" className="brand-mark" aria-label="OK Manager home">
+        <Link href="/" className="brand-mark" aria-label={`${companyInfo.name} home`}>
           <Image
             src="/ok-manager-logo.png"
-            alt="OK Manager"
+            alt={companyInfo.name}
             width={170}
             height={136}
             className="brand-logo"
             priority
           />
-          <span className="brand-text">OK Manager</span>
+          <span className="brand-text">{companyInfo.name}</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
           {navItems.map((item) => (
@@ -81,10 +83,11 @@ export default function AboutPage() {
           <p className="eyebrow">About OK Manager</p>
           <h1>We build practical software for service businesses.</h1>
           <p>
-            OK Manager is the company behind OK Manager CRM, a mobile-first
-            customer and operations platform for teams that manage services,
-            payments, leads, suppliers, and follow-ups.
+            {companyInfo.name} is the company behind OK Manager CRM, a
+            mobile-first customer and operations platform for teams that manage
+            services, payments, leads, suppliers, and follow-ups.
           </p>
+          <CompanyContact />
           <div className="hero-actions">
             <Link className="button button-solid" href="/features">
               View Product
@@ -122,7 +125,7 @@ export default function AboutPage() {
 
       <footer className="footer container">
         <div className="footer-row">
-          <p>© {new Date().getFullYear()} OK Manager. Built for field teams.</p>
+          <p>© {new Date().getFullYear()} {companyInfo.name}. Built for field teams.</p>
           <nav className="footer-links" aria-label="Legal">
             <Link href="/about">About</Link>
             <Link href="/terms">Terms</Link>

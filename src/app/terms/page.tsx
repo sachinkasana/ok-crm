@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CompanyContact } from "../components/company-contact";
+import { companyInfo } from "../company";
 import { LegalShell } from "../components/legal-shell";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | OK Manager",
-  description: "Terms of Service for OK Manager CRM.",
+  title: `Terms of Service | ${companyInfo.name}`,
+  description: `Terms of Service for ${companyInfo.productName}.`,
 };
 
 export default function TermsPage() {
@@ -68,9 +70,7 @@ export default function TermsPage() {
 
       <section className="legal-section">
         <h2>8. Contact</h2>
-        <p>
-          Phone / WhatsApp: <a href="tel:+919536500003">+91 95365 00003</a>
-        </p>
+        <CompanyContact />
       </section>
     </LegalShell>
   );
