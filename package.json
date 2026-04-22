@@ -1,6 +1,7 @@
 {
   "name": "ok-manager-crm-website",
   "version": "0.1.0",
+  "description": "Website for OK Manager CRM.",
   "private": true,
   "scripts": {
     "dev": "next dev",
