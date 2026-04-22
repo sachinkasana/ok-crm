@@ -1,5 +1,6 @@
 export const companyInfo = {
   name: "OK MANAGER INFOTECH SOLUTION",
+  brandName: "OK Manager",
   productName: "OK Manager CRM",
   address:
     "H.N. 26, Pravesh Vihar Shastri Nagar Meerut Uttar Pradesh India (250004)",

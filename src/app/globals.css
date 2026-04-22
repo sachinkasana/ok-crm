@@ -130,8 +130,7 @@ a {
   display: inline-flex;
   gap: 0.5rem;
   min-height: 44px;
-  min-width: 0;
-  white-space: normal;
+  white-space: nowrap;
 }
 
 .brand-logo {
@@ -142,11 +141,9 @@ a {
 
 .brand-text {
   color: var(--ink);
-  font-size: clamp(0.76rem, 1.1vw, 0.9rem);
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0;
-  line-height: 1.15;
-  max-width: 28ch;
 }
 
 .nav-links {
@@ -657,9 +654,7 @@ main {
   }
 
   .brand-text {
-    font-size: 0.76rem;
-    max-width: min(28ch, calc(100vw - 100px));
-    text-align: center;
+    font-size: 0.8rem;
   }
 
   .nav-links {

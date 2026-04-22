@@ -32,16 +32,16 @@ export function LegalShell({
       </div>
 
       <header className="topbar container">
-        <Link href="/" className="brand-mark" aria-label={`${companyInfo.name} home`}>
+        <Link href="/" className="brand-mark" aria-label={`${companyInfo.brandName} home`}>
           <Image
             src="/ok-manager-logo.png"
-            alt={companyInfo.name}
+            alt={companyInfo.brandName}
             width={170}
             height={136}
             className="brand-logo"
             priority
           />
-          <span className="brand-text">{companyInfo.name}</span>
+          <span className="brand-text">{companyInfo.brandName}</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
           {navItems.map((item) => (
