@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About OK Manager | OK Manager CRM",
+  description:
+    "Learn about OK Manager, the company behind OK Manager CRM for service businesses and field teams.",
+};
 
 const navItems = [
   { href: "/features", label: "Features" },
@@ -9,58 +16,30 @@ const navItems = [
   { href: "/#contact", label: "Contact" },
 ];
 
-const featureDetails = [
+const principles = [
   {
-    title: "Customer + Service Management",
-    bullets: [
-      "Customer profiles with contact and address details",
-      "Service schedule tracking with status lifecycle",
-      "Map-based customer visibility for field operations",
-    ],
+    title: "Built Around Daily Operations",
+    copy:
+      "OK Manager CRM focuses on the records, reminders, ledgers, and follow-ups that service teams handle every day.",
   },
   {
-    title: "Payments, Ledger, and EMI Tracking",
-    bullets: [
-      "Given/received entries with running balance",
-      "EMI setup with due-date handling",
-      "Attachment-enabled records for proofs and notes",
-    ],
+    title: "Simple Enough for Field Teams",
+    copy:
+      "The product keeps workflows direct, mobile-first, and practical for teams that need quick customer actions.",
   },
   {
-    title: "Lead Pipeline",
-    bullets: [
-      "Lead creation and status progression",
-      "Activity timeline and follow-up reminders",
-      "One-step lead conversion to customer records",
-    ],
+    title: "Clear Business Visibility",
+    copy:
+      "Owners can see what is due, what is collected, and where customers, leads, and suppliers stand.",
   },
   {
-    title: "Supplier Operations",
-    bullets: [
-      "Supplier profile management",
-      "Supplier ledger for payable/advance balance tracking",
-      "Daily payables visibility for purchasing workflows",
-    ],
-  },
-  {
-    title: "Authentication + Onboarding",
-    bullets: [
-      "OTP-based login flow",
-      "Owner profile setup on first login",
-      "Session-based access to app modules",
-    ],
-  },
-  {
-    title: "Language + Communication",
-    bullets: [
-      "English and Hindi language support",
-      "Direct call/WhatsApp quick actions",
-      "Permission-driven notifications and reminders",
-    ],
+    title: "Support for Growing Teams",
+    copy:
+      "The platform is designed for businesses moving from scattered records to a structured operating system.",
   },
 ];
 
-export default function FeaturesPage() {
+export default function AboutPage() {
   return (
     <div className="site-shell">
       <div className="background-orbs" aria-hidden="true">
@@ -84,7 +63,7 @@ export default function FeaturesPage() {
         <nav className="nav-links" aria-label="Primary">
           {navItems.map((item) => (
             <Link
-              className={`nav-link${item.href === "/features" ? " is-active" : ""}`}
+              className={`nav-link${item.href === "/about" ? " is-active" : ""}`}
               key={item.href}
               href={item.href}
             >
@@ -99,42 +78,43 @@ export default function FeaturesPage() {
 
       <main className="container inner-main">
         <section className="inner-hero reveal-item">
-          <p className="eyebrow">Dedicated Feature Page</p>
-          <h1>Detailed capability view for your sales and onboarding flow.</h1>
+          <p className="eyebrow">About OK Manager</p>
+          <h1>We build practical software for service businesses.</h1>
           <p>
-            Use this page when prospects want module-level clarity before
-            rollout.
+            OK Manager is the company behind OK Manager CRM, a mobile-first
+            customer and operations platform for teams that manage services,
+            payments, leads, suppliers, and follow-ups.
           </p>
           <div className="hero-actions">
-            <Link className="button button-solid" href="/#contact">
-              Request Demo
+            <Link className="button button-solid" href="/features">
+              View Product
             </Link>
-            <Link className="button button-ghost" href="/">
-              Back to Home
+            <Link className="button button-ghost" href="/#contact">
+              Contact Us
             </Link>
           </div>
         </section>
 
         <section className="section-head features-head">
-          <h2>Complete module breakdown</h2>
+          <p className="eyebrow">Our Focus</p>
+          <h2>Helping teams replace scattered work with one reliable workflow.</h2>
           <p className="section-copy">
-            Structured by real daily workflows your team performs in the app.
+            OK Manager CRM brings customer records, service schedules, ledgers,
+            EMI tracking, leads, and supplier activity into a single app so
+            business owners and field teams can work from the same source of
+            truth.
           </p>
         </section>
 
-        <section className="detail-grid" aria-label="Feature breakdown">
-          {featureDetails.map((item, index) => (
+        <section className="detail-grid" aria-label="Company principles">
+          {principles.map((item, index) => (
             <article
               className="detail-card reveal-item"
               key={item.title}
               style={{ animationDelay: `${0.06 * index}s` }}
             >
               <h2>{item.title}</h2>
-              <ul>
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
+              <p>{item.copy}</p>
             </article>
           ))}
         </section>

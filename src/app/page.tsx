@@ -60,6 +60,7 @@ const workflowSteps = [
 
 const navItems = [
   { href: "/features", label: "Features" },
+  { href: "/about", label: "About" },
   { href: "/#workflow", label: "How it works" },
   { href: "/#pricing", label: "Pricing" },
   { href: "/#contact", label: "Contact" },
@@ -84,7 +85,7 @@ export default function Home() {
             className="brand-logo"
             priority
           />
-          <span className="brand-text">OK MANAGER CRM</span>
+          <span className="brand-text">OK Manager</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
           {navItems.map((item) => (
@@ -154,7 +155,7 @@ export default function Home() {
             <h2>Everything needed for customer-led service operations.</h2>
             <p className="section-copy">
               The feature set maps directly to live workflows already used in
-              the OK Manager app.
+              the OK Manager CRM app.
             </p>
           </div>
           <div className="feature-grid">
@@ -241,8 +242,9 @@ export default function Home() {
 
       <footer className="footer container">
         <div className="footer-row">
-          <p>© {new Date().getFullYear()} OK Manager CRM. Built for field teams.</p>
+          <p>© {new Date().getFullYear()} OK Manager. Built for field teams.</p>
           <nav className="footer-links" aria-label="Legal">
+            <Link href="/about">About</Link>
             <Link href="/terms">Terms</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/account-deletion">Account deletion</Link>

@@ -455,6 +455,7 @@ main {
 .pricing-includes li,
 .contact-panel p,
 .inner-hero p,
+.detail-card p,
 .detail-card li {
   color: var(--ink-muted);
   line-height: 1.62;

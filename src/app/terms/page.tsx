@@ -13,7 +13,7 @@ export default function TermsPage() {
       <section className="legal-section">
         <h2>1. Acceptance</h2>
         <p>
-          By using OK Manager, you agree to these Terms of Service and our{" "}
+          By using OK Manager CRM, you agree to these Terms of Service and our{" "}
           <Link href="/privacy">Privacy Policy</Link>.
         </p>
       </section>
@@ -21,7 +21,7 @@ export default function TermsPage() {
       <section className="legal-section">
         <h2>2. Services</h2>
         <p>
-          OK Manager provides customer, payment, service, lead, and supplier
+          OK Manager CRM provides customer, payment, service, lead, and supplier
           management features for businesses.
         </p>
       </section>

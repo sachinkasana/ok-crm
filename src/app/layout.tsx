@@ -17,7 +17,7 @@ const bodyFont = Source_Sans_3({
 export const metadata: Metadata = {
   title: "OK Manager CRM",
   description:
-    "OK Manager is a simple CRM for service businesses to manage customers, payments, leads, suppliers, and follow-ups.",
+    "OK Manager CRM is a simple CRM by OK Manager for service businesses to manage customers, payments, leads, suppliers, and follow-ups.",
 };
 
 export default function RootLayout({

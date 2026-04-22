@@ -11,6 +11,7 @@ type LegalShellProps = {
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/features", label: "Features" },
+  { href: "/about", label: "About" },
   { href: "/terms", label: "Terms" },
   { href: "/privacy", label: "Privacy" },
 ];
@@ -39,7 +40,7 @@ export function LegalShell({
             className="brand-logo"
             priority
           />
-          <span className="brand-text">OK MANAGER CRM</span>
+          <span className="brand-text">OK Manager</span>
         </Link>
         <nav className="nav-links" aria-label="Primary">
           {navItems.map((item) => (
@@ -64,8 +65,9 @@ export function LegalShell({
 
       <footer className="footer container">
         <div className="footer-row">
-          <p>© {new Date().getFullYear()} OK Manager CRM. Built for field teams.</p>
+          <p>© {new Date().getFullYear()} OK Manager. Built for field teams.</p>
           <nav className="footer-links" aria-label="Legal">
+            <Link href="/about">About</Link>
             <Link href="/terms">Terms</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/account-deletion">Account deletion</Link>

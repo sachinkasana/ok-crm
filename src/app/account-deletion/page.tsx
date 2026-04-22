@@ -16,7 +16,7 @@ export default function AccountDeletionPage() {
       <section className="legal-section">
         <h2>Delete account from app</h2>
         <p>
-          In the OK Manager app, open <strong>Profile</strong> and tap{" "}
+          In the OK Manager CRM app, open <strong>Profile</strong> and tap{" "}
           <strong>Delete account</strong>. Confirm the prompt to submit deletion.
         </p>
       </section>
